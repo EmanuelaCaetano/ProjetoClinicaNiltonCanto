@@ -6,6 +6,12 @@ body, html {
     padding: 0;
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
+
+    /* Adicionando a imagem de fundo */
+    background-image: url('../imagens/fundo_clinica.jpg'); /* Caminho para a imagem */
+    background-size: cover; /* Ajusta a imagem para cobrir todo o elemento */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    background-attachment: fixed; /* Mantém a imagem fixa durante a rolagem (opcional) */
 }
 
 .container {
@@ -17,6 +23,7 @@ body, html {
     width: 90%;
     max-width: 600px;
 }
+
 
 .content {
     padding: 20px;
