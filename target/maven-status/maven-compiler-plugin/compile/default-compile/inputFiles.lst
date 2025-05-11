@@ -1,10 +1,13 @@
 C:\Users\Diego Caetano\Downloads\clinica\src\main\java\com\mack\clinica\model\AgendarConsultaDAO.java
-C:\Users\Diego Caetano\Downloads\clinica\src\main\java\com\mack\clinica\model\UsuarioDAO.java
+C:\Users\Diego Caetano\Downloads\clinica\src\main\java\com\mack\clinica\model\Consulta.java
 C:\Users\Diego Caetano\Downloads\clinica\src\main\java\com\mack\clinica\controller\LoginActionServlet.java
 C:\Users\Diego Caetano\Downloads\clinica\src\main\java\com\mack\clinica\controller\LoginServlet.java
-C:\Users\Diego Caetano\Downloads\clinica\src\main\java\com\mack\clinica\controller\AgendarConsultaServlet.java
+C:\Users\Diego Caetano\Downloads\clinica\src\main\java\com\mack\clinica\model\ConsultaDAO.java
 C:\Users\Diego Caetano\Downloads\clinica\src\main\java\com\mack\clinica\model\Usuario.java
 C:\Users\Diego Caetano\Downloads\clinica\src\main\java\com\mack\clinica\controller\LogoutServlet.java
 C:\Users\Diego Caetano\Downloads\clinica\src\main\java\com\mack\clinica\util\DatabaseConnection.java
 C:\Users\Diego Caetano\Downloads\clinica\src\main\java\com\mack\clinica\controller\AdminDashboardServlet.java
+C:\Users\Diego Caetano\Downloads\clinica\src\main\java\com\mack\clinica\controller\MinhaAgendaServlet.java
+C:\Users\Diego Caetano\Downloads\clinica\src\main\java\com\mack\clinica\model\UsuarioDAO.java
+C:\Users\Diego Caetano\Downloads\clinica\src\main\java\com\mack\clinica\controller\AgendarConsultaServlet.java
 C:\Users\Diego Caetano\Downloads\clinica\src\main\java\com\mack\clinica\controller\PacienteDashboardServlet.java
