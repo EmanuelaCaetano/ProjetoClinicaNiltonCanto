@@ -35,6 +35,7 @@
     <%
             }
         }
+        out.println("Nomes encontrados: " + nomesMedicos);
     %>
 </select>
 

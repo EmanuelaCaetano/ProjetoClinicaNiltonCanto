@@ -7,6 +7,7 @@ com\mack\clinica\controller\LoginActionServlet.class
 com\mack\clinica\model\ConsultaDAO.class
 com\mack\clinica\model\AgendarConsultaDAO.class
 com\mack\clinica\controller\AgendaAdministradorServlet.class
+com\mack\clinica\controller\CadastroMedicoServlet.class
 com\mack\clinica\model\UsuarioDAO.class
 com\mack\clinica\util\DatabaseConnection.class
 com\mack\clinica\controller\AgendarConsultaServlet.class
