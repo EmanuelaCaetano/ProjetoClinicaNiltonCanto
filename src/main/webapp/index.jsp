@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login</title>
+    <title>Login e Menu</title>
     <link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 <body>
@@ -20,6 +20,15 @@
 
         <button type="submit">Entrar</button>
     </form>
+</div>
+
+<hr/>
+
+<div>
+    <h2>Menu Principal</h2>
+    <ul>
+        <li><a href="${pageContext.request.contextPath}/exibirCadastroPaciente">Cadastrar Pacientes</a></li>
+    </ul>
 </div>
 
 </body>

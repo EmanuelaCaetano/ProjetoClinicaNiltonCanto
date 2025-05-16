@@ -138,4 +138,14 @@ public class Consulta {
     public void setMedico(String medico) {
         this.medico = medico;
     }
+    private String pacienteNome;
+
+    public String getPacienteNome() {
+        return pacienteNome;
+    }
+
+    public void setPacienteNome(String pacienteNome) {
+        this.pacienteNome = pacienteNome;
+    }
+
 }

@@ -13,14 +13,14 @@ public class AgendarConsultaDAO {
 
     private String realPathBase;
 
-    public AgendarConsultaDAO(String realPathBase) {
-        this.realPathBase = realPathBase;
+    public AgendarConsultaDAO(ServeletContext context) {
+        this.context = context;
     }
 
     public boolean agendarConsulta(int pacienteId, int profissionalId, String dataHora) {
         String sql = "INSERT INTO consultas (paciente_id, profissional_id, data_hora, status, observacoes) VALUES (?, ?, ?, 'agendada', '')";
 
-        try (Connection conn = DatabaseConnection.getConnection(realPathBase)) {
+        try (Connection conn = DatabaseConnection.getConnection("WEB-INF/db.db")) {
             PreparedStatement stmt = conn.prepareStatement(sql);
             stmt.setInt(1, pacienteId);
             stmt.setInt(2, profissionalId);
@@ -39,7 +39,7 @@ public class AgendarConsultaDAO {
         List<Usuario> medicos = new ArrayList<>();
         String sql = "SELECT id, nome FROM usuarios WHERE tipo = 'medico'";
     
-        try (Connection conn = DatabaseConnection.getConnection(realPathBase);
+        try (Connection conn = DatabaseConnection.getConnection("WEB-INF/db.db");
              PreparedStatement stmt = conn.prepareStatement(sql);
              ResultSet rs = stmt.executeQuery()) {
     

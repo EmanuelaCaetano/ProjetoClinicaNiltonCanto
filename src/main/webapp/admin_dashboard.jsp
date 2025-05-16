@@ -14,8 +14,8 @@
         <div class="nav-links">
             <a href="admin_dashboard">Home</a>
             <a href="#">Cadastro de Pacientes</a>
-            <a href="#">Cadastro de Médicos</a>
-            <a href="#">Consultar Agenda</a>
+            <a href="cadastro_medico">Cadastro de Médicos</a>
+            <a href="agenda_administrador">Consultar Agenda</a>
             <a href="#">Ficha Clínica</a>
             <a href="${pageContext.request.contextPath}/logout" class="logout-link">Logout</a>
         </div>

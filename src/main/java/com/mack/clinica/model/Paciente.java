@@ -1,23 +1,49 @@
 package com.mack.clinica.model;
 
-public class Paciente extends Usuario {
-    private String cpf;
-    private String celular;
+    public class Paciente {
+        private int id;
+        private String cpf;
+        private String nome;
+        private String email;
+        private String celular;
+        private String senha;
 
-    public Paciente(int id, String nome, String email, String senha, String tipo, String cpf, String celular) {
-        super(id, nome, email, senha, tipo);
-        this.cpf = cpf;
-        this.celular = celular;
+        // Getters e Setters
+        public int getId() {
+            return id;
+        }
+        public void setId(int id) {
+            this.id = id;
+        }
+        public String getNome() {
+            return nome;
+        }
+        public void setNome(String nome) {
+            this.nome = nome;
+        }
+        public String getEmail() {
+            return email;
+        }
+        public void setEmail(String email) {
+            this.email = email;
+        }
+        public String getCelular() {
+            return celular;
+        }
+        public void setCelular(String celular) {
+            this.celular = celular;
+        }
+        protected String getSenha(){
+            return senha;
+        }
+        public void setSenha(String senha) {
+            this.senha = senha;
+        }
+        protected String getCpf() {
+            return cpf;
+        }
+        public void setCpf(String cpf) {
+            this.cpf = cpf;
+        }
     }
-
-    public String getCpf() { return cpf; }
-    public void setCpf(String cpf) { this.cpf = cpf; }
-    public String getCelular() { return celular; }
-    public void setCelular(String celular) { this.celular = celular; }
-
-    @Override
-    public void exibirDados() {
-        super.exibirDados(); // Chama o método da superclasse (Usuario)
-        System.out.println(", CPF: " + cpf + ", Celular: " + celular);
-    }
-}
+    
