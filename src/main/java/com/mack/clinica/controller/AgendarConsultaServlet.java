@@ -11,7 +11,6 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.HttpSession;
 
 @WebServlet("/agendarConsulta")
 public class AgendarConsultaServlet extends HttpServlet {
@@ -20,54 +19,52 @@ public class AgendarConsultaServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
-        // Instancia o DAO com o contexto para conectar ao banco
-        AgendarConsultaDAO dao = new AgendarConsultaDAO(getServletContext());
-
+        // Obtém o caminho real do projeto
+        String realPathBase = request.getServletContext().getRealPath("/");
+        // Instancia o DAO passando o caminho
+        AgendarConsultaDAO dao = new AgendarConsultaDAO(realPathBase);
         // Busca a lista de médicos
         List<Usuario> medicos = dao.listarMedicos();
         System.out.println("Médicos encontrados: " + (medicos != null ? medicos.size() : 0));
-
-        // Atribui a lista no request para o JSP usar
+        // Atribui a lista no request para ser usada no JSP
         request.setAttribute("medicos", medicos);
-
         // Encaminha para a página de agendamento
         request.getRequestDispatcher("/agendar_consulta.jsp").forward(request, response);
     }
-
+    
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try {
-            // Pega os dados do formulário
+            // Pega dados do formulário
             int profissionalId = Integer.parseInt(request.getParameter("profissionalId"));
             String dataHora = request.getParameter("dataHora");
 
-            // Pega o usuário da sessão
-            HttpSession session = request.getSession();
-            Usuario usuario = (Usuario) session.getAttribute("usuario");
-
-            if (usuario == null || !"paciente".equals(usuario.getTipo())) {
+            // Pega o paciente_id da sessão
+            Integer pacienteIdObj = (Integer) request.getSession().getAttribute("id");
+            if (pacienteIdObj == null) {
                 System.out.println("Paciente não autenticado. Redirecionando para login.");
                 response.sendRedirect("index.jsp");
                 return;
             }
+            int pacienteId = pacienteIdObj;
 
-            int pacienteId = usuario.getId();
+            // Conecta no banco
+            String realPathBase = request.getServletContext().getRealPath("/");
 
             System.out.println("Paciente ID: " + pacienteId);
             System.out.println("Profissional ID: " + profissionalId);
             System.out.println("Data e Hora: " + dataHora);
 
-            // Instancia DAO
-            AgendarConsultaDAO dao = new AgendarConsultaDAO(getServletContext());
+            AgendarConsultaDAO dao = new AgendarConsultaDAO(realPathBase);
 
             // Agenda a consulta
             boolean sucesso = dao.agendarConsulta(pacienteId, profissionalId, dataHora);
             System.out.println("Sucesso: " + sucesso);
-
             if (sucesso) {
-                response.sendRedirect("mensagem_sucesso.jsp");
+                // apresenta o pop-up de sucesso e mensagem_sucesso.jsp redireciona para o painel do paciente
+                response.sendRedirect("/mensagem_sucesso.jsp");
+
             } else {
                 response.sendRedirect("index.jsp?erro=agendar");
             }
@@ -77,4 +74,5 @@ public class AgendarConsultaServlet extends HttpServlet {
             response.sendRedirect("paciente_dashboard.jsp?msg=erro");
         }
     }
+
 }
