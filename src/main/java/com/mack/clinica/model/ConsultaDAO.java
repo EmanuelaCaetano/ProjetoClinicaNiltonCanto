@@ -30,7 +30,7 @@ public class ConsultaDAO {
     """;
 
 
-        try (Connection conn = DatabaseConnection.getConnection("WEB-INF/db.db");
+        try (Connection conn = DatabaseConnection.getConnection(pathBase);
              PreparedStatement stmt = conn.prepareStatement(sql)) {
 
             stmt.setInt(1, pacienteId);

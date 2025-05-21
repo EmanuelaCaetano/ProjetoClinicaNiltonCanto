@@ -48,19 +48,6 @@ public class Usuario {
     private String celular;
     private String senha;
 
-    // Construtor sem argumentos (adicionado)
-    public Usuario() {
-    }
-
-    // Construtor que aceita os parâmetros esperados pela classe Paciente
-    public Usuario(int id, String nome, String email, String senha, String tipo) {
-        this.id = id;
-        this.nome = nome;
-        this.email = email;
-        this.senha = senha;
-        this.tipo = tipo;
-    }
-
     // Getters e Setters
     public int getId() {
         return id;
@@ -94,8 +81,6 @@ public class Usuario {
         this.email = email;
     }
 
-<<<<<<< HEAD
-=======
     public String getCpf() {
         return cpf;
     }
@@ -112,7 +97,6 @@ public class Usuario {
         this.celular = celular;
     }
 
->>>>>>> Emanuela
     public String getSenha() {
         return senha;
     }
@@ -120,13 +104,4 @@ public class Usuario {
     public void setSenha(String senha) {
         this.senha = senha;
     }
-<<<<<<< HEAD
-
-    // Método para exibir os dados do usuário
-    public void exibirDados() {
-        System.out.println("ID: " + id + ", Nome: " + nome + ", Email: " + email + ", Tipo: " + tipo);
-    }
 }
-=======
-}
->>>>>>> Emanuela
