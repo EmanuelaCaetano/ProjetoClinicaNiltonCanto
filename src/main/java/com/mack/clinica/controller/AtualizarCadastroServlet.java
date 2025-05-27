@@ -2,7 +2,7 @@ package com.mack.clinica.controller;
 
 import com.mack.clinica.model.Usuario;
 import com.mack.clinica.model.UsuarioDAO;
-import com.mack.clinica.util.DatabaseConnection;
+
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;

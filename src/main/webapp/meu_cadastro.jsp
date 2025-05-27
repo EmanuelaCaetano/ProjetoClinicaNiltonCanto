@@ -10,24 +10,22 @@
 <html>
 <head>
     <title>Meu Cadastro</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+<div class="container">
     <h2>Meus Dados</h2>
+
     <p><strong>Nome:</strong> <%= usuario.getNome() %></p>
     <p><strong>Email:</strong> <%= usuario.getEmail() %></p>
     <p><strong>Telefone:</strong> <%= usuario.getCelular() %></p>
     <p><strong>CPF:</strong> <%= usuario.getCpf() %></p>
 
-        
-    <%-- botão para edição --%>
-    <hr>
-    <a href="editar_cadastro.jsp">Editar meus dados</a>
-
-    <%-- botão para voltar ao dashboard --%>
-    <form action="paciente_dashboard" method="get">
-        <button type="submit">Voltar para o Dashboard</button>
-    </form>
-
+    <%-- Botões --%>
+    <a href="editar_cadastro.jsp" class="button">Editar meus dados</a>
+    <a href="paciente_dashboard.jsp" class="button">Voltar ao Dashboard</a>
+</div>
 
 </body>
 </html>

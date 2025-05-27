@@ -1,14 +1,10 @@
 package com.mack.clinica.model;
 
 import com.mack.clinica.util.DatabaseConnection;
-import com.mack.clinica.model.Consulta;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 
 
 public class ConsultaDAO {
