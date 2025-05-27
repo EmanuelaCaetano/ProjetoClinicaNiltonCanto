@@ -6,6 +6,8 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import com.mack.clinica.model.Usuario;
+
 
 @WebServlet("/meuCadastro")
 public class VisualizarDadosPacienteServlet extends HttpServlet {
@@ -13,14 +15,17 @@ public class VisualizarDadosPacienteServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
 
-        // Verifica se há usuário logado
-        if (request.getSession().getAttribute("usuarioLogado") == null) {
-            response.sendRedirect("index.jsp");
+        //verifica se o usuario esta logado e salva em variavel:
+        Usuario usuarioLogado = (Usuario) request.getSession().getAttribute("usuarioLogado");
+
+        // só volta para o login se não estiver logado
+        if (usuarioLogado == null) {
+            response.sendRedirect("login");
             return;
         }
 
         // Redireciona para o JSP
-        request.getRequestDispatcher("meu_cadastro.jsp").forward(request, response);
+        request.setAttribute("usuario", usuarioLogado);
+        request.getRequestDispatcher("/meu_cadastro.jsp").forward(request, response);
     }
 }
-
