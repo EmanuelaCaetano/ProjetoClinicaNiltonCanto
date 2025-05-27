@@ -17,5 +17,17 @@
     <p><strong>Email:</strong> <%= usuario.getEmail() %></p>
     <p><strong>Telefone:</strong> <%= usuario.getCelular() %></p>
     <p><strong>CPF:</strong> <%= usuario.getCpf() %></p>
+
+        
+    <%-- botão para edição --%>
+    <hr>
+    <a href="editar_cadastro.jsp">Editar meus dados</a>
+
+    <%-- botão para voltar ao dashboard --%>
+    <form action="paciente_dashboard" method="get">
+        <button type="submit">Voltar para o Dashboard</button>
+    </form>
+
+
 </body>
 </html>
