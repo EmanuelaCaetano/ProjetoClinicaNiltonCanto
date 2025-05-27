@@ -57,7 +57,8 @@ public class UsuarioDAO {
      */
     public static Usuario buscarUsuario(String email, String senha, String realPathBase) {
         try (Connection conn = DatabaseConnection.getConnection(realPathBase)) {
-            String sql = "SELECT id, nome, tipo FROM usuarios WHERE email = ? AND senha = ?";
+            //atualizada para mostrar todos os dados em /MeuCadastro
+            String sql = "SELECT id, nome, email, cpf, celular, tipo, senha FROM usuarios WHERE email = ? AND senha = ?";
             PreparedStatement stmt = conn.prepareStatement(sql);
             stmt.setString(1, email);
             stmt.setString(2, senha);
@@ -65,10 +66,14 @@ public class UsuarioDAO {
             ResultSet rs = stmt.executeQuery();
 
             if (rs.next()) {
+                //setters atualizados para incluir todos os dados do usuário
                 Usuario usuario = new Usuario();
                 usuario.setId(rs.getInt("id"));
                 usuario.setNome(rs.getString("nome"));
-                usuario.setTipo(rs.getString("tipo"));
+                usuario.setEmail(rs.getString("email"));
+                usuario.setCpf(rs.getString("cpf"));
+                usuario.setCelular(rs.getString("celular"));
+                usuario.setTipo(rs.getString("tipo"));                    usuario.setSenha(rs.getString("senha")); // Só se necessário
                 return usuario;
             }
 
@@ -102,4 +107,26 @@ public class UsuarioDAO {
             throw new RuntimeException("Erro ao cadastrar médico.", e);
         }
     }
+    public static boolean atualizarUsuario(Usuario usuario, String realPathBase) {
+    String sql = "UPDATE usuarios SET nome = ?, email = ?, celular = ?, senha = ? WHERE id = ?";
+
+    try (Connection conn = DatabaseConnection.getConnection(realPathBase);
+         PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+        stmt.setString(1, usuario.getNome());
+        stmt.setString(2, usuario.getEmail());
+        stmt.setString(3, usuario.getCelular());
+        stmt.setString(4, usuario.getSenha());
+        stmt.setInt(5, usuario.getId());
+
+        int linhasAfetadas = stmt.executeUpdate();
+        return linhasAfetadas > 0;
+
+    } catch (SQLException e) {
+        e.printStackTrace();
+        throw new RuntimeException("Erro ao atualizar usuário.", e);
+    }
+}
+
+
 }
