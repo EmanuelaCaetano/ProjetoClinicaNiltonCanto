@@ -35,6 +35,7 @@ public class LoginActionServlet extends HttpServlet {
             session.setAttribute("id", usuario.getId());
             session.setAttribute("nome", usuario.getNome());
             session.setAttribute("tipo", usuario.getTipo());
+            session.setAttribute("usuarioLogado", usuario);
 
             if ("admin".equalsIgnoreCase(usuario.getTipo())) {
                 response.sendRedirect("admin_dashboard");
