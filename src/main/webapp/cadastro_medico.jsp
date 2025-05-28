@@ -25,6 +25,7 @@
 
         <input type="submit" value="Cadastrar Médico">
     </form>
-    <a href="paciente_dashboard">Voltar ao Dashboard</a>
+    <a class="button" href="admin_dashboard">Voltar ao Dashboard</a>
+
 </body>
 </html>

@@ -37,7 +37,7 @@ public class CadastroMedicoServlet extends HttpServlet {
         medico.setTipo("medico");
 
         dao.cadastrarMedico(medico, basePath);
-
-        response.sendRedirect("admin_dashboard.jsp");
+                                                    //alterado para nao mandar direto para a pagina do login
+        response.sendRedirect("admin_dashboard");
     }
 }
