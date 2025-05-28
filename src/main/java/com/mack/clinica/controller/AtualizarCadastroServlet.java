@@ -29,7 +29,9 @@ public class AtualizarCadastroServlet extends HttpServlet {
         String email = request.getParameter("email");
         String celular = request.getParameter("celular");
         String senha = request.getParameter("senha");
-
+        
+        //variavel para não perder o tipo do usuario
+        String tipoOriginal = usuarioLogado.getTipo();
         // Atualizar dados do objeto
         usuarioLogado.setNome(nome);
         usuarioLogado.setEmail(email);
@@ -37,6 +39,9 @@ public class AtualizarCadastroServlet extends HttpServlet {
         if (senha != null && !senha.trim().isEmpty()) {
             usuarioLogado.setSenha(senha); // Lembre-se: ideal seria usar hash
         }
+
+        // Garante que o tipo não será alterado ou perdido
+        usuarioLogado.setTipo(tipoOriginal);
 
         String realPath = request.getServletContext().getRealPath("/");
 
