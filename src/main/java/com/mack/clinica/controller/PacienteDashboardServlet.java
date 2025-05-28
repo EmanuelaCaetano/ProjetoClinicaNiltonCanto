@@ -15,6 +15,15 @@ public class PacienteDashboardServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+
+        //verifica se ha e qual é o usuario logado
+        Object usuario = request.getSession().getAttribute("usuarioLogado");
+
+        if (usuario == null || !"paciente".equalsIgnoreCase(((com.mack.clinica.model.Usuario) usuario).getTipo())) {
+            response.sendRedirect("login");
+            return;
+        }
+        
         request.getRequestDispatcher("/paciente_dashboard.jsp").forward(request, response);
     }
 }
