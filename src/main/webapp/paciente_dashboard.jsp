@@ -3,9 +3,9 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Painel do Paciente</title>
+    <!--<title>Painel do Paciente</title>-->
     <!-- Importa o CSS externo -->
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/pacienteDash.css">
 </head>
 <body>
 
@@ -20,11 +20,11 @@
         </div>
     </div>
 
-    <!-- Conteúdo principal -->
+    <!-- Conteúdo principal 
     <div class="content">
         <h1>Painel do Paciente</h1>
         <p>Bem-vindo ao seu painel, onde você poderá visualizar informações e agendar consultas.</p>
-    </div>
+    </div>-->
 
 </body>
 </html>
