@@ -23,7 +23,7 @@
     <div class="navbar">
         <div class="nav-links">
             <a href="admin_dashboard">Home</a>
-            <a href="cadastrarPaciente">Cadastrar Paciente</a>
+            <a href="cadastrar_paciente">Cadastrar Paciente</a>
             <a href="cadastro_medico">Cadastro de Médicos</a>
             <a href="agenda_administrador">Consultar Agenda</a>
             <a href="ficha_clinica.jsp">Acessar Ficha Clínica</a>
