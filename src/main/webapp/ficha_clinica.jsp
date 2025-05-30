@@ -11,9 +11,21 @@
 <html>
 <head>
     <title>Ficha Clínica</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navBar.css">
+    <link rel="stylesheet" href="css/agenda.css">
 </head>
 <body>
+    <div class="navbar">
+        <div class="nav-links">
+            <a href="admin_dashboard">Home</a>
+            <a href="cadastrarPaciente">Cadastrar Paciente</a>
+            <a href="cadastro_medico">Cadastro de Médicos</a>
+            <a href="agenda_administrador">Consultar Agenda</a>
+            <a href="ficha_clinica.jsp">Acessar Ficha Clínica</a>
+            <a href="${pageContext.request.contextPath}/logout" class="logout-link">Logout</a>
+        </div>
+    </div>
+
 <div class="container">
     <h2>Ficha Clínica</h2>
 
@@ -27,7 +39,6 @@
         <button type="submit" class="button">Salvar</button>
     </form>
     
-    <a href="admin_dashboard.jsp" class="button">Voltar ao Dashboard</a>
 </div>
 </body>
 </html>

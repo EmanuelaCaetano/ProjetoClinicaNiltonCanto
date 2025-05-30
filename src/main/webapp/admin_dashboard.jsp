@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <title>Painel do Administrador</title>
     <!-- Importa o CSS externo -->
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/navBar.css">
+    <link rel="stylesheet" href="css/adminDash.css">
 </head>
 <body>
 
@@ -13,7 +14,7 @@
     <div class="navbar">
         <div class="nav-links">
             <a href="admin_dashboard">Home</a>
-            <a href="cadastrar_paciente">Cadastrar Paciente</a>
+            <a href="cadastrarPaciente">Cadastrar Paciente</a>
             <a href="cadastro_medico">Cadastro de Médicos</a>
             <a href="agenda_administrador">Consultar Agenda</a>
             <a href="ficha_clinica.jsp">Acessar Ficha Clínica</a>
@@ -21,11 +22,8 @@
         </div>
     </div>
 
-    <!-- Conteúdo principal -->
-    <div class="content">
-        <h1>Painel do Administrador</h1>
-        <p>Bem-vindo ao painel administrativo. Aqui você poderá gerenciar pacientes e consultas.</p>
-    </div>
+
+    
 </body>
 </html>
 
