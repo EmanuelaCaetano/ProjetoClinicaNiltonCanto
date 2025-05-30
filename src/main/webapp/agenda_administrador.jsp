@@ -16,12 +16,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Agenda Administrador</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navBar.css">
+    <link rel="stylesheet" href="css/agenda.css">
 </head>
 <body>
-    <h2>Agenda - Todas as Consultas</h2>
+    <div class="navbar">
+        <div class="nav-links">
+            <a href="admin_dashboard">Home</a>
+            <a href="cadastrarPaciente">Cadastrar Paciente</a>
+            <a href="cadastro_medico">Cadastro de Médicos</a>
+            <a href="agenda_administrador">Consultar Agenda</a>
+            <a href="ficha_clinica.jsp">Acessar Ficha Clínica</a>
+            <a href="${pageContext.request.contextPath}/logout" class="logout-link">Logout</a>
+        </div>
+    </div>
 
-    <form method="get" action="agenda_administrador">
+    <h2>Agenda - Todas as Consultas</h2>
+<div class="spacer">
+    <form method="get" action="agenda_administrador" >
         <label>Médico:</label>
 <select name="medico">
     <option value="">Todos</option>
@@ -48,7 +60,7 @@
 
         <input type="submit" value="Filtrar" />
     </form>
-
+</div>
     <table border="1">
         <tr>
             <th>Data</th>
@@ -78,6 +90,5 @@
         %>
     </table>
 
-    <a href="admin_dashboard.jsp">Voltar ao Dashboard</a>
 </body>
 </html>

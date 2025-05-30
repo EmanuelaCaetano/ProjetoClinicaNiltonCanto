@@ -242,4 +242,12 @@ a.button:hover {
     transform: translateY(-2px);
 }
 
+.spacer {
+    width: 80%;
+    margin: 30px auto;
+}
 
+.spacer input[type="submit"] {
+    margin-top: 30px;
+    
+}
