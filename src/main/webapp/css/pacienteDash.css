@@ -4,50 +4,7 @@ body {
     padding: 0;
     font-family: 'Segoe UI', sans-serif;
     background-color: #deded3; /* cor de fundo parecida com a imagem */
+    background-image: url('../img/PacienteDash.png');
+
 }
 
-/* Navbar container */
-.navbar {
-    background-color: #f6f1eb;
-    padding: 10px 0;
-    border-bottom: 1px solid #ccc;
-    display: flex;
-    justify-content: center;
-}
-
-/* Container interno para os links */
-.nav-links {
-    display: flex;
-    gap: 1px;
-}
-
-/* Estilo geral dos links */
-.nav-links a {
-    text-decoration: none;
-    color: #3b3a2f;
-    font-size: 14px;
-    padding: 10px 18px;
-    border: 1px solid #dcd2c2;
-    background-color: transparent;
-    transition: all 0.3s ease;
-}
-
-/* Aba ativa (opcional) */
-.nav-links a.active {
-    background-color: #3b3a2f;
-    color: white;
-}
-
-/* Hover */
-.nav-links a:hover {
-    background-color: #eae4dc;
-}
-
-/* Estilo do botão "Logout" */
-.nav-links a.logout-link {
-    border: 1px solid #b58fff;
-}
-
-.nav-links a.logout-link:hover {
-    background-color: #f3ebff;
-}

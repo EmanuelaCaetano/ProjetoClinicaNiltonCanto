@@ -1,121 +1,58 @@
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: 'Arial', sans-serif;
-    height: 100vh;
-    display: flex;
-    background-color: #d9d9c7; /* cor de fundo da imagem */
-}
-
-/* Lado esquerdo com logo */
-.logo-area {
-    width: 50%;
-    background-image: url('../img/logo_area.png'); /* coloque sua imagem aqui */
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-/* Lado direito com login */
-.login-area {
-    width: 50%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #d6d8cb;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f3eee8;
+    height: 100vh;
+    margin: 0;
 }
 
-/* Estilização do contêiner de login */
 .login-container {
-    background-color: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    background-color: #f3efea;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    width: 320px;
+    text-align: center;
 }
 
 h2 {
-    text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    font-size: 24px;
+    color: #333;
 }
 
-label, input {
+label {
     display: block;
-    width: 100%;
-    margin-bottom: 15px;
+    text-align: left;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
 }
 
 input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-/* Botão com efeito hover */
-button {
     width: 100%;
     padding: 10px;
-    background-color: #3c3b31;
-    color: white;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #3c3b30;
+    color: #fff;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-    background-color: #5a5849;
-}
-
-/* NAVBAR */
-.navbar {
-    background-color: #f6f1eb;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: center;
-    border-bottom: 1px solid #dcd2c2;
-}
-
-.nav-links {
-    display: flex;
-    gap: 1px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #3b3a2f;
-    font-size: 14px;
-    padding: 10px 18px;
-    border: 1px solid #dcd2c2;
-    background-color: transparent;
-    transition: all 0.3s ease;
-    display: inline-block;
-}
-
-/* Aba ativa (ex: HOME selecionado) */
-.nav-links a.active {
-    background-color: #3b3a2f; /* marrom escuro */
-    color: white;
-}
-
-/* Hover suave nas abas */
-.nav-links a:hover {
-    background-color: #e7dfd4;
-}
-
-/* Botão SAIR com borda roxa */
-.nav-links a.logout-link {
-    border: 1px solid #b58fff;
-    color: #3b3a2f;
-    font-weight: 500;
-}
-
-.nav-links a.logout-link:hover {
-    background-color: #f3ebff;
+    background-color: #2a2921;
+    transform: translateY(-2px);
 }

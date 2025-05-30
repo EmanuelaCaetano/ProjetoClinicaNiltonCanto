@@ -1,0 +1,245 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #d6d6c8;
+}
+
+.content, .container {
+    background-color: #f3efea;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 500px;
+    margin: 50px auto;
+    font-family: Arial, sans-serif;
+}
+
+.content h1, .container h2 {
+    margin-bottom: 25px;
+    font-size: 26px;
+    color: #333;
+    text-align: center;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+select,
+input[type="datetime-local"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #fff;
+    font-size: 14px;
+    color: #333;
+}
+
+select:invalid {
+    color: #888;
+}
+
+.button {
+    width: 100%;
+    padding: 12px;
+    background-color: #3c3b30;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    background-color: #2a2921;
+    transform: translateY(-2px);
+
+}
+
+
+h2 {
+    text-align: center;
+    margin-top: 120px;
+    color: #333;
+}
+
+/* Estilização da tabela */
+table {
+    width: 80%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background-color: #f3efea;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #e0dad2;
+    color: #333;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #faf7f2;
+}
+
+tr:hover {
+    background-color: #ece8e0;
+}
+
+td[colspan="4"] {
+    text-align: center;
+    color: #777;
+    font-style: italic;
+}
+
+.container p {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    padding-left: 5px;
+}
+
+.container strong {
+    color: #222;
+}
+
+/* Ajuste fino no botão dentro de .container */
+.container .button {
+    width: fit-content;
+    padding: 10px 20px;
+    font-size: 15px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+
+
+
+
+/* Estilo para campos de texto e email (formulários de cadastro/login) */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 14px;
+    color: #333;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #999078;
+    outline: none;
+}
+
+/* Botão de envio de formulário */
+input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #3c3b30;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #2a2921;
+    transform: translateY(-2px);
+}
+
+/* Estilo para mensagens de sucesso e erro */
+p[style*="green"] {
+    background-color: #e6ffed;
+    color: #267d36;
+    border: 1px solid #b2f5c1;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+p[style*="red"] {
+    background-color: #ffe6e6;
+    color: #a94442;
+    border: 1px solid #f5c6cb;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+/* Estilo para links dentro do formulário (ex: voltar) */
+.content a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #3c3b30;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+}
+
+.content a:hover {
+    text-decoration: underline;
+}
+
+a.button {
+    display: inline-block;
+    text-decoration: none; /* Remove o sublinhado */
+    padding: 12px;
+    background-color: #3c3b30;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+}
+
+a.button:hover {
+    background-color: #2a2921;
+    transform: translateY(-2px);
+}
+
+
