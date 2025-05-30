@@ -12,6 +12,7 @@
 <div class="login-container">
     <h2>Login</h2>
     <form method="post" action="loginAction">
+        
         <label for="email">E-mail:</label>
         <input type="text" id="email" name="email" required>
 

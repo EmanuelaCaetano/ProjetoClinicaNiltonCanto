@@ -10,9 +10,19 @@
 <html>
 <head>
     <title>Meu Cadastro</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navBar.css">
+    <link rel="stylesheet" href="css/agenda.css">
 </head>
 <body>
+    <div class="navbar">
+        <div class="nav-links">
+            <a href="paciente_dashboard">Home</a>
+            <a href="agendarConsulta">Agendamento de Consultas</a>
+            <a href="minhaAgenda">Minha Agenda</a>
+            <a href="meuCadastro">Meu Cadastro</a>
+            <a href="${pageContext.request.contextPath}/logout" class="logout-link">Logout</a>
+        </div>
+    </div>
 
 <div class="container">
     <h2>Meus Dados</h2>
@@ -24,7 +34,7 @@
 
     <%-- Botões --%>
     <a href="editar_cadastro.jsp" class="button">Editar meus dados</a>
-    <a href="paciente_dashboard.jsp" class="button">Voltar ao Dashboard</a>
+    
 </div>
 
 </body>

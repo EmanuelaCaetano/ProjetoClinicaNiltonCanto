@@ -13,7 +13,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Editar Meu Cadastro</title>
-    <link rel="stylesheet" href="/css/style.css"> <%-- Inclua seu CSS --%>
+    <link rel="stylesheet" href="css/navBar.css"> <%-- Inclua seu CSS --%>
+    <link rel="stylesheet" href="css/agenda.css"> <%-- Inclua seu CSS --%>
+    
+
 </head>
 <body>
 

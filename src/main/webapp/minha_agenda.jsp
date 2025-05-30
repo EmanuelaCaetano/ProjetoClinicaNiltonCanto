@@ -17,9 +17,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Minha Agenda</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/agenda.css">
+    <link rel="stylesheet" href="css/navBar.css">
 </head>
 <body>
+    <div class="navbar">
+        <div class="nav-links">
+            <a href="paciente_dashboard">Home</a>
+            <a href="agendarConsulta">Agendamento de Consultas</a>
+            <a href="minhaAgenda">Minha Agenda</a>
+            <a href="meuCadastro">Meu Cadastro</a>
+            <a href="${pageContext.request.contextPath}/logout" class="logout-link">Logout</a>
+        </div>
+    </div>
+
     <h2>Suas Consultas Agendadas</h2>
 
     <table border="1">
@@ -49,6 +60,5 @@
         %>
     </table>
 
-    <a href="paciente_dashboard">Voltar ao Dashboard</a>
 </body>
 </html>

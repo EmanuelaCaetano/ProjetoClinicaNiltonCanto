@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <!--<title>Painel do Paciente</title>-->
     <!-- Importa o CSS externo -->
+     <link rel="stylesheet" href="css/navBar.css">
     <link rel="stylesheet" href="css/pacienteDash.css">
+
 </head>
 <body>
 
