@@ -49,6 +49,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class UsuarioDAO {
 
@@ -148,6 +150,28 @@ public class UsuarioDAO {
             throw new RuntimeException("Erro ao cadastrar paciente.", e);
         }
     }
+    //metodo que sera usado para os prontuarios
+    public static List<Usuario> listarPacientes(String realPathBase) {
+    List<Usuario> pacientes = new ArrayList<>();
+    String sql = "SELECT id, nome FROM usuarios WHERE tipo = 'paciente'";
+
+    try (Connection conn = DatabaseConnection.getConnection(realPathBase);
+         PreparedStatement stmt = conn.prepareStatement(sql);
+         ResultSet rs = stmt.executeQuery()) {
+
+        while (rs.next()) {
+            Usuario u = new Usuario();
+            u.setId(rs.getInt("id"));
+            u.setNome(rs.getString("nome"));
+            pacientes.add(u);
+        }
+
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
+
+    return pacientes;
+}
 
 
 

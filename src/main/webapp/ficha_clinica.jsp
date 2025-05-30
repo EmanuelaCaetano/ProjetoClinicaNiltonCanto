@@ -21,24 +21,35 @@
             <a href="cadastrar_paciente">Cadastrar Paciente</a>
             <a href="cadastro_medico">Cadastro de Médicos</a>
             <a href="agenda_administrador">Consultar Agenda</a>
-            <a href="ficha_clinica.jsp">Acessar Ficha Clínica</a>
+            <a href="fichaClinica">Acessar Ficha Clínica</a>
             <a href="${pageContext.request.contextPath}/logout" class="logout-link">Logout</a>
         </div>
     </div>
 
-<div class="container">
-    <h2>Ficha Clínica</h2>
+    <div class="container">
+        <h2>Ficha Clínica</h2>
 
-    <form method="post" action="salvarFichaClinica">
-        <label>Paciente:</label>
-        <input type="text" name="paciente" value="<%= usuario.getNome() %>" readonly />
+        <form method="post" action="salvarFichaClinica">
+            <label>Paciente:</label>
+            <input type="hidden" name="pacienteId" value="<%= usuario.getId() %>" />
+            <p><strong>Paciente:</strong> <%= usuario.getNome() %></p>
 
-        <label>Observações Médicas:</label>
-        <textarea name="observacoes" rows="6" placeholder="Descreva as informações médicas..."></textarea>
 
-        <button type="submit" class="button">Salvar</button>
-    </form>
-    
-</div>
+            <label>Data:</label>
+            <input type="date" name="data" required />
+
+            <label>Anotações:</label>
+            <textarea name="anotacoes" rows="4"></textarea>
+
+            <label>Prescrições:</label>
+            <textarea name="prescricoes" rows="4"></textarea>
+
+            <button type="submit" class="button">Salvar</button>
+        </form>
+
+        <% if (request.getAttribute("mensagem") != null) { %>
+            <p><%= request.getAttribute("mensagem") %></p>
+        <% } %>
+    </div>
 </body>
 </html>
