@@ -110,23 +110,45 @@ public class UsuarioDAO {
     public static boolean atualizarUsuario(Usuario usuario, String realPathBase) {
     String sql = "UPDATE usuarios SET nome = ?, email = ?, celular = ?, senha = ? WHERE id = ?";
 
-    try (Connection conn = DatabaseConnection.getConnection(realPathBase);
-         PreparedStatement stmt = conn.prepareStatement(sql)) {
+        try (Connection conn = DatabaseConnection.getConnection(realPathBase);
+            PreparedStatement stmt = conn.prepareStatement(sql)) {
 
-        stmt.setString(1, usuario.getNome());
-        stmt.setString(2, usuario.getEmail());
-        stmt.setString(3, usuario.getCelular());
-        stmt.setString(4, usuario.getSenha());
-        stmt.setInt(5, usuario.getId());
+            stmt.setString(1, usuario.getNome());
+            stmt.setString(2, usuario.getEmail());
+            stmt.setString(3, usuario.getCelular());
+            stmt.setString(4, usuario.getSenha());
+            stmt.setInt(5, usuario.getId());
 
-        int linhasAfetadas = stmt.executeUpdate();
-        return linhasAfetadas > 0;
+            int linhasAfetadas = stmt.executeUpdate();
+            return linhasAfetadas > 0;
 
-    } catch (SQLException e) {
-        e.printStackTrace();
-        throw new RuntimeException("Erro ao atualizar usuário.", e);
+            } catch (SQLException e) {
+                e.printStackTrace();
+                throw new RuntimeException("Erro ao atualizar usuário.", e);
+            }
     }
-}
+
+//metodo para cadastrar paciente > sera usado em CadastrarPacienteServlet.java
+    public void cadastrarPaciente(Usuario paciente, String realPathBase) {
+        String sql = "INSERT INTO usuarios (nome, email, cpf, celular, tipo, senha, created_at) " +
+                    "VALUES (?, ?, ?, ?, 'paciente', ?, datetime('now'))";
+
+        try (Connection conn = DatabaseConnection.getConnection(realPathBase);
+            PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+            stmt.setString(1, paciente.getNome());
+            stmt.setString(2, paciente.getEmail());
+            stmt.setString(3, paciente.getCpf());
+            stmt.setString(4, paciente.getCelular());
+            stmt.setString(5, paciente.getSenha());
+
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RuntimeException("Erro ao cadastrar paciente.", e);
+        }
+    }
+
 
 
 }
