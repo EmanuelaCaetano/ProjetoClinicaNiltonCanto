@@ -35,7 +35,7 @@ Este projeto é um sistema web desenvolvido em **Java com JSP/Servlets**, voltad
 ### Aqui temos nossa Home para o perfil administrativo, onde conseguimos vizualizar todas as funcionalidades da aplicação
 ![](https://github.com/EmanuelaCaetano/ProjetoClinicaNiltonCanto/blob/main/src/main/webapp/img/admPainel.jpeg)
 
-### Aqui temos nossa agenda administrativa, onde nosso administrador pode conferir todas as consultas e realizar buscas
+### Nessa página temos nossa agenda administrativa, onde nosso administrador pode conferir todas as consultas e realizar buscas
 ![](https://github.com/EmanuelaCaetano/ProjetoClinicaNiltonCanto/blob/main/src/main/webapp/img/agenda.jpeg)
 
 ### Aqui pode ser verificado o prontuario de pacientes
@@ -71,7 +71,7 @@ mvn jetty:run
 
 ## Desenvolvedores:
 
-Esse projeto foi desenvolvido por: [Nilton Canto](), [EmanuelaCaetano]() e [Giovanna]()
+Esse projeto foi desenvolvido por: [Nilton Canto](https://github.com/niltonmack), [Emanuela Caetano](https://github.com/EmanuelaCaetano) e [Giovanna dias](https://github.com/gi-a-dias)
 
 ---
 
