@@ -1,4 +1,4 @@
-# 🏥 Sistema de Agendamento de Consultas - Clínica Nilton Canto
+# 🏥 Sistema de Agendamento de Consultas - Clínica Mackenzie Engenharia
 
 Este projeto é um sistema web desenvolvido em **Java com JSP/Servlets**, voltado para o agendamento de consultas em uma clínica médica. O objetivo principal foi aplicar conhecimentos de desenvolvimento fullstack em Java, organizando o fluxo de usuários, profissionais de saúde e administração de horários, em um ambiente intuitivo, funcional e seguro.
 
