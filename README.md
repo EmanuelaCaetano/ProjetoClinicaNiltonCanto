@@ -29,7 +29,7 @@ Este projeto é um sistema web desenvolvido em **Java com JSP/Servlets**, voltad
 ## veja abaixo imagens do nosso sistema:
 
 ### Nosso primeiro contato com a aplicação, onde todos os usuarios podem fazer o seu Login
-![](https://github.com/EmanuelaCaetano/ProjetoClinicaNiltonCanto/blob/main/src/main/webapp/img/admPainel.jpeg)
+![](https://github.com/EmanuelaCaetano/ProjetoClinicaNiltonCanto/blob/main/src/main/webapp/img/adm_login.jpeg)
 
 
 ### Aqui temos nossa Home para o perfil administrativo, onde conseguimos vizualizar todas as funcionalidades da aplicação
